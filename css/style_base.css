@@ -111,7 +111,7 @@ main section .podio h3 {
 .top5 .podio__img {
   padding-bottom: 60px;
   display: flex;
-  gap: 80px;
+  gap: 20px;
 }
 
 footer {
