@@ -5,13 +5,15 @@
   --green: #39b24a;
   --lightWhite: #f3f3f3;
   --white: #fff;
+  
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+  flex-flow: wrap
+  }
 
 body {
   background: var(--lightWhite);
@@ -22,16 +24,24 @@ header {
   background: var(--gray);
   color: var(--white);
   padding: 0.5rem 1.25rem;
-  /*Añadimos flex*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
+
 header nav ul {
-  /*Añadimos flex*/
+  display: flex;
+  gap: 20px;
 }
 
 header .header__logo {
-  /*Añadimos flex*/
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
+
 
 header .header__logo span,
 footer .footer__logo span {
@@ -45,11 +55,12 @@ main {
     padding: 35px 0px;
     /* Alto del main: alto viewport - alto Header - alto Footer 
        Me aseguro que el main ocupa todo el alto disponible */
-    min-height: calc(100vh - 100px - 150px);  
+    /* min-height: calc(100vh - 100px - 150px);   */
 }
 
 main .container {
-  /*Añadimos flex*/
+  display: flex;
+  justify-content: space-evenly;
 }
 
 main section .card {
@@ -71,7 +82,8 @@ main section .delivery span {
 main section .podio {
   background: #fff;
   font-weight: bold;
-  /*Añadimos flex*/
+  display: flex;
+  justify-content: space-around;
 }
 main section .podio h3 {
   color: var(--red);
@@ -87,7 +99,7 @@ main section .podio h3 {
 }
 
 .top5 {
-  /*Añadimos flex*/
+  display: flex;
 }
 
 .top5 .podio__pizzas ol li {
@@ -96,24 +108,33 @@ main section .podio h3 {
 
 .top5 .podio__img {
   padding-bottom: 60px;
-  /*Añadimos flex*/
+  display: flex;
 }
 
 footer {
   background: #222;
   padding: 19px 20px;
-  /*Añadimos flex*/
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+flex-direction: row-reverse;
 }
 
 footer .footer__logo {
   color: var(--lightWhite);
   font-size: 14px;
-  /*Añadimos flex*/
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 footer ul {
   color: var(--lightWhite);
-  /*Añadimos flex*/
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+
 }
 
 @media screen and (max-width:  768px) {
